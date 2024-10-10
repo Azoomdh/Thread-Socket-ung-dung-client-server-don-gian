@@ -16,7 +16,7 @@ public class ThreadDocDuLieuClientGuiVe implements Runnable{
     @Override
     public void run(){
         try {
-            String idClient1 = server1Socket1.getInetAddress().getHostAddress();
+            String idClient1 = server1Socket1.getInetAddress().toString();
             while(true){ 
                 String str1= docDuLieuClientGuiVe1.readUTF();
                 System.out.println("[id : "+ idClient1+ " ] said= "+ str1);
