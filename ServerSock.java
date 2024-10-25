@@ -17,10 +17,8 @@ public class ServerSock {
             Thread threadDocDuLieuBanPhimVaGuiClient1 = new Thread( new ThreadDocDuLieuBanPhimVaGuiClient(server1Socket1, docDuLieuBanPhim1, ghiDuLieuToiClient1) );
             Thread threadDocDuLieuClientGuiVe1 = new Thread( new ThreadDocDuLieuClientGuiVe(server1Socket1, docDuLieuClientGuiVe1) );
 
-            while(true){
                 threadDocDuLieuClientGuiVe1.start();
                 threadDocDuLieuBanPhimVaGuiClient1.start();
-            }
         } catch (IOException ex) {
             System.out.println("IOException : "+ ex.getMessage());
         }
